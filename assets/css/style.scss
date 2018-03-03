@@ -1,0 +1,131 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+$header-height: 5rem;
+$header-padding-left: 1.5rem;
+
+body {
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: $header-height;
+}
+
+a {
+    color: #4684ee;
+    &:hover {
+        background-color: #4684ee;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.page-header {
+    display: flex;
+    background: transparent;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0rem $header-padding-left;
+    height: $header-height;
+
+    .project-name {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+        font-weight: normal;
+        background-color: #4684ee;
+        padding: 0.2rem 0.4rem;
+    }
+}
+
+.site-footer {
+    display: none;
+}
+
+.main-content {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #000;
+    }
+}
+
+aside {
+    position: fixed;
+    top: $header-height;
+    right: calc(50% + 32rem);
+    margin-right: 1.2rem;
+}
+
+.post-navigation {
+    margin-top: 0;
+    padding-left: 0;
+    list-style-type: none;
+    font-size: 1.1rem;
+    text-align: right;
+}
+
+.post-navigation a {
+    padding: 0.1rem 0.3rem;
+}
+
+.post {    
+    background-color: #fff;
+    padding: 2rem 6rem;
+    position: relative;
+}
+
+.post + .post {
+    margin-top: 2rem;
+}
+
+.post-anchor {
+    position: absolute;
+    top: -2rem;
+}
+
+@media screen and (min-width: 64em) {
+    .page-header, .main-content {
+        width: 64rem;
+    }
+}
+
+@media screen and (max-width: 80em) {
+    aside {
+        position: static;
+        width: 64rem;
+        margin-right: 0;
+        padding-left: $header-padding-left;
+    }
+
+    .post-navigation {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+
+        li + li {
+            margin-left: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 64em) {
+    .page-header, aside, .main-content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 42em) {
+    .page-header {
+        padding: 1.5rem 0;
+    }
+
+    .post {
+        padding: 2rem 1rem;
+    }
+}

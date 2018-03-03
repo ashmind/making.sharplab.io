@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <title>Making SharpLab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">   
+
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="icon" type="image/png" href="{{ '/assets/favicon-256.png?v=' | append: site.github.build_revision | relative_url }}" sizes="256x256">
+    <link rel="icon" type="image/png" href="{{ '/assets/favicon-196.png?v=' | append: site.github.build_revision | relative_url }}" sizes="196x196">
+    <link rel="icon" type="image/png" href="{{ '/assets/favicon-128.png?v=' | append: site.github.build_revision | relative_url }}" sizes="128x128">
+    <link rel="icon" type="image/png" href="{{ '/assets/favicon-96.png?v=' | append: site.github.build_revision | relative_url }}" sizes="96x96">
+    <link rel="icon" type="image/png" href="{{ '/assets/favicon-64.png?v=' | append: site.github.build_revision | relative_url }}" sizes="64x64">
+    <link rel="icon" type="image/png" href="{{ '/assets/favicon-32.png?v=' | append: site.github.build_revision | relative_url }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ '/assets/favicon-16.png?v=' | append: site.github.build_revision | relative_url }}" sizes="16x16">
+  </head>
+  <body>
+    <header class="page-header">
+      <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
+    </header>
+    <aside>
+      <ul class="post-navigation">
+        {% for post in site.posts %}   
+          <li><a href="#{{post.id | remove_first: '/'}}">{{post.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </aside>
+    <main class="main-content">
+      {{content}}
+    </main>
+  </body>
+</html>

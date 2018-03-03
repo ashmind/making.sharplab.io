@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" shape-rendering="crispEdges">
+  <rect fill="#4684ee" stroke="#fff" width="100%" height="100%"/>
+  <path stroke="#fff" stroke-width="9" d="M32 0 v128"/>
+  <path stroke="#fff" d="M64 0 v128" stroke-width="2"/>
+  <path stroke="#fff" d="M96 0 v128" stroke-width="2"/>
+  
+  <path stroke="#fff" stroke-width="9" d="M0 96 h128"/>
+  <path stroke="#fff" d="M0 64 h128" stroke-width="2"/>
+  <path stroke="#fff" d="M0 32 h128" stroke-width="2"/>
+</svg>
